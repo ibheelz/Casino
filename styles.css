@@ -1,23 +1,28 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: url('images/bg-image.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures it covers the full screen */
+    color: #FFD700; /* Golden contrast */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #002244;
-    color: white;
-    padding: 20px;
+    background-color: #D52B1E; /* Chilean red */
+    color: #FFFFFF; /* White text */
+    padding: 10px;
     text-align: center;
     width: 100%;
 }
 
+
 .slogan {
     font-style: italic;
-    font-size: 14px;
+    font-size: 22px;
+    padding-top: 0;
+    color: #ffffff; /* Golden touch */
 }
 
 /* Main Container */
@@ -25,31 +30,53 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
+    background-color: #061f3f; /* White background for content readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Bonus Cards (Responsive) */
+/* Bonus Cards */
 .bonus-card {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping for small screens */
+    flex-wrap: wrap;
     align-items: center;
-    background: white;
+    background: rgb(10, 1, 43); /* Light gray-white for smooth contrast */
     padding: 20px;
     margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    border: 2px solid #0539a1; /* Red border */
     gap: 20px;
 }
 
 .operator-logo {
-    width: 80px;
-    height: 80px;
-    background: lightgray;
-    border-radius: 5px;
-    flex-shrink: 0;
+    width: 120px; /* Default size */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.operator-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px; /* Optional */
+}
+
+@media (max-width: 768px) {
+    .operator-logo {
+        width: 100%; /* Make logo full width */
+        height: auto; /* Maintain aspect ratio */
+        display: flex;
+        justify-content: center;
+    }
+
+    .operator-logo img {
+        width: 100%; /* Ensure image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
 
 .bonus-details {
     flex: 2;
@@ -58,15 +85,17 @@ body {
 }
 
 .bonus-details h3 {
-    font-size: 18px;
+    font-size: 20px;
+    color: #ffffff; /* Deep blue for headings */
     margin: 0;
 }
 
 .bonus-details p {
     font-size: 14px;
-    color: gray;
+    color: #017ca5; /* Neutral gray for readability */
 }
 
+/* Call-to-action buttons */
 .cta {
     flex: 1;
     text-align: center;
@@ -75,16 +104,17 @@ body {
 
 .claim-btn {
     display: block;
-    background: #00C851;
-    color: white;
-    padding: 10px;
+    background: #D52B1E; /* Red bet button */
+    color: #FFFFFF; /* White text */
+    padding: 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
 .claim-btn:hover {
-    background: #009e40;
+    background: #A51916; /* Darker red for hover */
 }
 
 .visit-link {
@@ -92,13 +122,13 @@ body {
     margin-top: 5px;
     font-size: 14px;
     text-decoration: underline;
-    color: black;
+    color: #ffffff;
 }
 
 /* Responsive Bonus Cards */
 @media (max-width: 768px) {
     .bonus-card {
-        flex-direction: column; /* Stacks elements vertically */
+        flex-direction: column;
         text-align: center;
     }
 
@@ -117,19 +147,18 @@ body {
 
 /* Best Bookmakers Section */
 .bookmakers-section {
-    background-color: #f4f4f9;
+    background-color: rgb(10, 1, 43); /* Deep blue */
     padding: 40px 5%;
     text-align: center;
 }
 
 .section-title {
     font-size: 26px;
-    color: #003366;
-    margin-bottom: 20px;
+    color: #ffffff; /* Gold for premium feel */
     font-weight: bold;
 }
 
-/* Two-column container with auto-responsive behavior */
+/* Two-column container */
 .bookmakers-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,34 +170,47 @@ body {
 
 /* Bookmaker Cards */
 .bookmaker-card {
-    background: white;
+    background: #FFFFFF; /* White for readability */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(213, 43, 30, 0.4); /* Red glow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
 
 .bookmaker-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 15px rgba(255, 69, 0, 0.5);
 }
 
 .bookmaker-card h3 {
     font-size: 20px;
-    color: #0066cc;
+    color: #003366; /* Blue for contrast */
     margin-bottom: 10px;
 }
 
 .bookmaker-card p {
     font-size: 14px;
-    color: #555;
+    color: #333; /* Dark gray */
     line-height: 1.6;
 }
 
-/* Responsive: Stack cards on smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 20px; /* Reduce size on mobile */
+    }
     .bookmakers-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Footer */
+.footer {
+    background: #D52B1E; /* Chilean red */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
 }
