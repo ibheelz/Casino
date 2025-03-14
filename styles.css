@@ -205,6 +205,53 @@ body {
     }
 }
 
+/* Community Section */
+.community-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #061f3f; /* Dark blue background */
+    color: white;
+}
+
+.community-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.community-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.community-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.community-btn.telegram-btn {
+    background: #0088CC; /* Telegram blue */
+}
+
+.community-btn:hover {
+    filter: brightness(1.1);
+}
+
+.community-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
 /* Footer */
 .footer {
     background: #D52B1E; /* Chilean red */
