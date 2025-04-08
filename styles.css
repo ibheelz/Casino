@@ -2,27 +2,27 @@
 body {
     font-family: 'Arial', sans-serif;
     background: url('images/bg-image.png') no-repeat center center fixed;
-    background-size: cover; /* Ensures it covers the full screen */
-    color: #FFD700; /* Golden contrast */
+    background-size: cover;
+    color: #FFD700;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #D52B1E; /* Chilean red */
-    color: #FFFFFF; /* White text */
+    background-color: #D52B1E;
+    color: #FFFFFF;
     padding: 2px;
     text-align: center;
     width: 100%;
 }
 
-
+/* Slogan */
 .slogan {
     font-style: italic;
     font-size: 22px;
     padding-top: 0;
-    color: #ffffff; /* Golden touch */
+    color: #ffffff;
 }
 
 /* Main Container */
@@ -30,7 +30,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: #061f3f; /* White background for content readability */
+    background-color: #061f3f;
     padding: 20px;
     border-radius: 10px;
 }
@@ -40,16 +40,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background: rgb(10, 1, 43); /* Light gray-white for smooth contrast */
+    background: rgb(10, 1, 43);
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
-    border: 2px solid #0539a1; /* Red border */
+    border: 2px solid #0539a1;
     gap: 20px;
 }
 
 .operator-logo {
-    width: 120px; /* Default size */
+    width: 120px;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -59,24 +59,8 @@ body {
 .operator-logo img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 10px; /* Optional */
+    border-radius: 10px;
 }
-
-@media (max-width: 768px) {
-    .operator-logo {
-        width: 100%; /* Make logo full width */
-        height: auto; /* Maintain aspect ratio */
-        display: flex;
-        justify-content: center;
-    }
-
-    .operator-logo img {
-        width: 100%; /* Ensure image fills the container */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-
 
 .bonus-details {
     flex: 2;
@@ -86,16 +70,15 @@ body {
 
 .bonus-details h3 {
     font-size: 20px;
-    color: #ffffff; /* Deep blue for headings */
+    color: #ffffff;
     margin: 0;
 }
 
 .bonus-details p {
     font-size: 14px;
-    color: #017ca5; /* Neutral gray for readability */
+    color: #017ca5;
 }
 
-/* Call-to-action buttons */
 .cta {
     flex: 1;
     text-align: center;
@@ -104,8 +87,8 @@ body {
 
 .claim-btn {
     display: block;
-    background: #D52B1E; /* Red bet button */
-    color: #FFFFFF; /* White text */
+    background: #D52B1E;
+    color: #FFFFFF;
     padding: 12px;
     border-radius: 5px;
     text-decoration: none;
@@ -114,7 +97,7 @@ body {
 }
 
 .claim-btn:hover {
-    background: #A51916; /* Darker red for hover */
+    background: #A51916;
 }
 
 .visit-link {
@@ -133,7 +116,16 @@ body {
     }
 
     .operator-logo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
         margin-bottom: 10px;
+    }
+
+    .operator-logo img {
+        width: 100%;
+        height: auto;
     }
 
     .bonus-details {
@@ -147,18 +139,18 @@ body {
 
 /* Best Bookmakers Section */
 .bookmakers-section {
-    background-color: rgb(10, 1, 43); /* Deep blue */
+    background-color: rgb(10, 1, 43);
     padding: 40px 5%;
     text-align: center;
 }
 
 .section-title {
     font-size: 26px;
-    color: #ffffff; /* Gold for premium feel */
+    color: #ffffff;
     font-weight: bold;
 }
 
-/* Two-column container */
+/* Bookmakers Grid */
 .bookmakers-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -168,15 +160,21 @@ body {
     align-items: stretch;
 }
 
-/* Bookmaker Cards */
 .bookmaker-card {
-    background: #FFFFFF; /* White for readability */
+    background: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(213, 43, 30, 0.4); /* Red glow effect */
+    box-shadow: 0px 4px 10px rgba(213, 43, 30, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
+
+.bookmaker-card.center-card {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 
 .bookmaker-card:hover {
     transform: translateY(-5px);
@@ -185,21 +183,21 @@ body {
 
 .bookmaker-card h3 {
     font-size: 20px;
-    color: #003366; /* Blue for contrast */
+    color: #003366;
     margin-bottom: 10px;
 }
 
 .bookmaker-card p {
     font-size: 14px;
-    color: #333; /* Dark gray */
+    color: #333;
     line-height: 1.6;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 20px; /* Reduce size on mobile */
+        font-size: 20px;
     }
+
     .bookmakers-container {
         grid-template-columns: 1fr;
     }
@@ -209,7 +207,7 @@ body {
 .community-section {
     text-align: center;
     padding: 40px 20px;
-    background: #061f3f; /* Dark blue background */
+    background: #061f3f;
     color: white;
 }
 
@@ -228,7 +226,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #25D366; /* WhatsApp green */
+    background: #25D366;
     color: white;
     padding: 12px 20px;
     border-radius: 5px;
@@ -239,7 +237,7 @@ body {
 }
 
 .community-btn.telegram-btn {
-    background: #0088CC; /* Telegram blue */
+    background: #0088CC;
 }
 
 .community-btn:hover {
@@ -251,13 +249,358 @@ body {
     height: 24px;
 }
 
-
 /* Footer */
 .footer {
-    background: #D52B1E; /* Chilean red */
-    color: #FFFFFF; /* White text */
+    background: #D52B1E;
+    color: #FFFFFF;
     text-align: center;
     padding: 15px;
     font-weight: bold;
     font-size: 16px;
+}
+
+/* Blog Section */
+.blog-preview-section {
+    padding: 50px 5%;
+    background-color: #0a012b;
+    text-align: center;
+}
+
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.blog-card {
+    width: calc(33.33% - 20px);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 18px;
+    color: #061f3f;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color: #444;
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    margin: 0 15px 20px;
+    padding: 10px;
+    background-color: #D52B1E;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #a51916;
+}
+
+/* Blog Responsive */
+@media (max-width: 1024px) {
+    .blog-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-card {
+        width: 100%;
+    }
+
+    .blog-card img {
+        height: 150px;
+    }
+}
+
+/* Modern Blog Page Enhancements */
+
+.post-hero {
+    position: relative;
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #0a012b, #061f3f);
+    color: #FFD700;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(circle at center, #D52B1E 0%, transparent 80%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.hero-content h1 {
+    font-size: 28px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Table of Contents */
+.toc {
+    background: #0a012b;
+    padding: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+    color: white;
+    border-left: 5px solid #D52B1E;
+    border-radius: 10px;
+}
+
+.toc h2 {
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin-bottom: 8px;
+}
+
+.toc a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.post-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.post-content h2 {
+    color: #FFD700;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.post-content h3 {
+    color: #61dafb;
+    margin-top: 15px;
+}
+
+.tick-list li {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.tick-list li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+}
+
+.risk-list li {
+    margin-bottom: 6px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1 1 200px;
+    background: #D52B1E;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-box {
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #FFD700;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #FFD700;
+}
+
+.promo-box {
+    background: #017ca5;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.faq div {
+    margin-bottom: 15px;
+}
+
+.scroll-table {
+    overflow-x: auto;
+}
+
+/* Smooth fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.styled-table-container {
+    margin: 30px 0;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.styled-table thead {
+    background-color: #D52B1E;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #eee;
+}
+
+/* FAQ Accordion */
+.faq-container {
+    margin-top: 30px;
+    border-top: 2px solid #FFD700;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #061f3f;
+    color: #FFD700;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-bottom: 1px solid #FFD700;
+}
+
+.faq-question:hover {
+    background-color: #0a2540;
+}
+
+.faq-question.active {
+    background-color: #0e355a;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Back link */
+.back-link {
+    background: #061f3f;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.back-link a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
 }
