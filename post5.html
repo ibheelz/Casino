@@ -133,17 +133,35 @@
 </footer>
 
 <script>
-    // FAQ toggle
-    const faqToggles = document.querySelectorAll('.faq-question');
-    faqToggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            const answer = btn.nextElementSibling;
-            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    // Hide FAQ answers initially
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.faq-answer').forEach(function(answer) {
+            answer.style.display = 'none';
         });
     });
 
-    // IntersectionObserver for animations
+    // FAQ toggle with animate.css fadeIn and fadeOut
+    const faqToggles = document.querySelectorAll('.faq-question');
+    faqToggles.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+                answer.classList.remove('animate__fadeOut');
+                answer.classList.add('animate__animated', 'animate__fadeIn');
+            } else {
+                answer.classList.remove('animate__fadeIn');
+                answer.classList.add('animate__animated', 'animate__fadeOut');
+                answer.addEventListener('animationend', function handleAnimationEnd() {
+                    answer.style.display = 'none';
+                    answer.classList.remove('animate__fadeOut');
+                    answer.removeEventListener('animationend', handleAnimationEnd);
+                });
+            }
+        });
+    });
+
+    // IntersectionObserver for animate-on-scroll elements
     document.addEventListener("DOMContentLoaded", function () {
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
@@ -151,14 +169,13 @@
                     const el = entry.target;
                     const anim = el.getAttribute('data-animate') || 'fadeInUp';
                     el.classList.add('animate__animated', 'animate__' + anim);
-                    el.classList.add('visible');
                     el.style.opacity = 1;
                     el.style.visibility = 'visible';
                     obs.unobserve(el);
                 }
             });
         }, { threshold: 0.2 });
-
+    
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             el.style.opacity = 0;
             el.style.visibility = 'hidden';

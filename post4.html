@@ -107,13 +107,13 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // Animate-on-scroll functionality
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
                     const anim = el.getAttribute('data-animate') || 'fadeInUp';
                     el.classList.add('animate__animated', 'animate__' + anim);
-                    el.classList.add('visible');
                     el.style.opacity = 1;
                     el.style.visibility = 'visible';
                     obs.unobserve(el);
@@ -127,12 +127,27 @@
             observer.observe(el);
         });
 
+        // FAQ toggle functionality with animation on the answer
         const faqToggles = document.querySelectorAll('.faq-question');
         faqToggles.forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.classList.toggle('active');
-                const answer = btn.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            btn.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                // Check if answer is hidden
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    // Trigger fadeIn animation on open
+                    answer.classList.remove('animate__fadeOut');
+                    answer.classList.add('animate__animated', 'animate__fadeIn');
+                } else {
+                    // Trigger fadeOut animation then hide after animation
+                    answer.classList.remove('animate__fadeIn');
+                    answer.classList.add('animate__animated', 'animate__fadeOut');
+                    answer.addEventListener('animationend', function handleAnimationEnd() {
+                        answer.style.display = 'none';
+                        answer.classList.remove('animate__fadeOut');
+                        answer.removeEventListener('animationend', handleAnimationEnd);
+                    });
+                }
             });
         });
     });
