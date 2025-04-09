@@ -130,6 +130,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // Animate-on-scroll functionality
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -142,13 +143,31 @@
                 }
             });
         }, { threshold: 0.2 });
-
+    
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             el.style.opacity = 0;
             el.style.visibility = 'hidden';
             observer.observe(el);
         });
 
+        // Hide FAQ answers on load
+        document.querySelectorAll('.faq-answer').forEach(function(answer) {
+            answer.style.display = 'none';
+        });
+    
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var answer = this.nextElementSibling;
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    
+        // Date formatting (if used)
         const dateElements = document.querySelectorAll(".date");
         const today = new Date();
         const formattedDate = today.toLocaleDateString("es-ES", { day: 'numeric', month: 'long', year: 'numeric' });
