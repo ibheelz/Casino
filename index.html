@@ -7,7 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" type="image/png" href="images/spade.png"/>
-
+    <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom keyframes for continuous scroll */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .animate-scroll {
+      animation: scroll-left 20s linear infinite;
+    }
+    @media (max-width: 768px) {
+      .animate-scroll {
+        animation-duration: 15s;
+      }
+    }
+  </style>
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -127,7 +147,189 @@
     </div>
 </section>
 
-
+<section class="bg-white py-12">
+    <!-- Inline styles for custom keyframes and animation.
+         If these styles do not apply, consider moving them to your global CSS or the <head>. -->
+    <style>
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        animation: scroll-left 20s linear infinite;
+      }
+      @media (max-width: 768px) {
+        .animate-scroll {
+          animation-duration: 15s;
+        }
+      }
+    </style>
+  
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Section Heading -->
+      <h2 class="text-center text-3xl font-bold text-gray-800 mb-2">Our Testimonials</h2>
+      <p class="text-center text-gray-600 mb-8">Real testimonials from our valued clients.</p>
+      
+      <!-- Scrolling Container -->
+      <div class="overflow-hidden relative">
+        <div class="flex space-x-8 animate-scroll" style="width: max-content;">
+          <!-- Testimonial Card 1 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <!-- Initials Circle: red background, initials text in blue (#061f3f) -->
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                SH
+              </div>
+            </div>
+            <!-- Testimonial Text in quotes and italic -->
+            <p class="mb-4 italic">&ldquo;Tanahair is the friendliest and most efficient company I've ever used.&rdquo;</p>
+            <!-- Author Name -->
+            <h4 class="font-semibold text-base">Shailma Hayden</h4>
+            <!-- Role text: smaller and lighter blue shade -->
+            <p class="text-xs text-blue-300">Product Designer</p>
+          </div>
+          
+          <!-- Testimonial Card 2 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                CJ
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Their approach to design is innovative and customer-focused.&rdquo;</p>
+            <h4 class="font-semibold text-base">Clay Johnson</h4>
+            <p class="text-xs text-blue-300">Business Director</p>
+          </div>
+          
+          <!-- Testimonial Card 3 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                JB
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Their service and attention to detail always exceed my expectations.&rdquo;</p>
+            <h4 class="font-semibold text-base">Jayson Brown</h4>
+            <p class="text-xs text-blue-300">Product Designer</p>
+          </div>
+          
+          <!-- Testimonial Card 4 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                AR
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;I highly recommend their services to anyone seeking top-notch design.&rdquo;</p>
+            <h4 class="font-semibold text-base">Amanda Ross</h4>
+            <p class="text-xs text-blue-300">Creative Director</p>
+          </div>
+          
+          <!-- Testimonial Card 5 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                DW
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Professional, efficient, and innovative. I'm extremely impressed.&rdquo;</p>
+            <h4 class="font-semibold text-base">David Wilkins</h4>
+            <p class="text-xs text-blue-300">Marketing Lead</p>
+          </div>
+          
+          <!-- Testimonial Card 6 -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                KT
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;A truly remarkable experience from start to finish.&rdquo;</p>
+            <h4 class="font-semibold text-base">Kara Thompson</h4>
+            <p class="text-xs text-blue-300">Head of Operations</p>
+          </div>
+          
+          <!-- Duplicate Cards for Seamless Scrolling -->
+          
+          <!-- Card 1 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                SH
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Tanahair is the friendliest and most efficient company I've ever used.&rdquo;</p>
+            <h4 class="font-semibold text-base">Shailma Hayden</h4>
+            <p class="text-xs text-blue-300">Product Designer</p>
+          </div>
+          
+          <!-- Card 2 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                CJ
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Their approach to design is innovative and customer-focused.&rdquo;</p>
+            <h4 class="font-semibold text-base">Clay Johnson</h4>
+            <p class="text-xs text-blue-300">Business Director</p>
+          </div>
+          
+          <!-- Card 3 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                JB
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Their service and attention to detail always exceed my expectations.&rdquo;</p>
+            <h4 class="font-semibold text-base">Jayson Brown</h4>
+            <p class="text-xs text-blue-300">Product Designer</p>
+          </div>
+          
+          <!-- Card 4 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                AR
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;I highly recommend their services to anyone seeking top-notch design.&rdquo;</p>
+            <h4 class="font-semibold text-base">Amanda Ross</h4>
+            <p class="text-xs text-blue-300">Creative Director</p>
+          </div>
+          
+          <!-- Card 5 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                DW
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;Professional, efficient, and innovative. I'm extremely impressed.&rdquo;</p>
+            <h4 class="font-semibold text-base">David Wilkins</h4>
+            <p class="text-xs text-blue-300">Marketing Lead</p>
+          </div>
+          
+          <!-- Card 6 Duplicate -->
+          <div style="background-color: #061f3f;" class="rounded-xl p-6 text-center text-white w-72 flex-shrink-0">
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center font-bold text-xl" style="color: white;">
+                KT
+              </div>
+            </div>
+            <p class="mb-4 italic">&ldquo;A truly remarkable experience from start to finish.&rdquo;</p>
+            <h4 class="font-semibold text-base">Kara Thompson</h4>
+            <p class="text-xs text-blue-300">Head of Operations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
 
 <!-- Blog Previews -->
 <section class="blog-preview-section">
