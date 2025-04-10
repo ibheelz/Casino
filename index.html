@@ -92,7 +92,7 @@
             <p>Publicidad | ¡Regístrate hoy y recibe hasta 5,000,000 CLP y 250 giros gratis!</p>
         </div>
         <div class="cta">
-            <p>Disponible Hoy: <span class="date"></span></p>
+            <p class="mb-2">Disponible Hoy: <span class="date"></span></p>
             <a href="https://todoalrojo.cl/pinup" class="claim-btn" target="_blank">APOSTAR AHORA</a>
             <a href="https://todoalrojo.cl/pinup" class="visit-link" target="_blank">Visitar Pinup</a>
         </div>
@@ -105,7 +105,7 @@
             <p>Publicidad | Bono válido para mayores de 18 años. Juega con Responsabilidad.</p>
         </div>
         <div class="cta">
-            <p>Disponible Hoy: <span class="date"></span></p>
+            <p  class="mb-2"> Disponible Hoy: <span class="date"></span></p>
             <a href="https://todoalrojo.cl/thunderpick" class="claim-btn" target="_blank">APOSTAR AHORA</a>
             <a href="https://todoalrojo.cl/thunderpick" class="visit-link" target="_blank">Visitar Thunderpick</a>
         </div>
@@ -118,7 +118,7 @@
             <p>Publicidad | Solo para mayores de 18. Disfruta con responsabilidad.</p>
         </div>
         <div class="cta">
-            <p>Disponible Hoy: <span class="date"></span></p>
+            <p class="mb-2"> Disponible Hoy: <span class="date"></span></p>
             <a href="https://todoalrojo.cl/evo" class="claim-btn" target="_blank">APOSTAR AHORA</a>
             <a href="https://todoalrojo.cl/evo" class="visit-link" target="_blank">Visitar EVO</a>
         </div>
@@ -132,17 +132,17 @@
     </h2>
     <div class="bookmakers-container">
         <div class="bookmaker-card animate-on-scroll" data-animate="fadeInLeft">
-            <h3>Pinup</h3>
+            <h3 class="text-4xl font-bold">Pinup</h3>
             <p>Pinup combina apuestas deportivas y casino en una sola plataforma con diseño atractivo y promociones constantes.</p>
         </div>
 
         <div class="bookmaker-card animate-on-scroll" data-animate="fadeInRight">
-            <h3>Thunderpick</h3>
+            <h3 class="text-4xl font-bold">Thunderpick</h3>
             <p>Criptomonedas + apuestas deportivas + eSports. Plataforma segura y veloz para jugadores modernos.</p>
         </div>
 
         <div class="bookmaker-card center-card animate-on-scroll" data-animate="zoomIn">
-            <h3>Evo</h3>
+            <h3 class="text-4xl font-bold">Evo</h3>
             <p>Evo se destaca por sus cuotas competitivas, atención al usuario y bonos atractivos. Ideal para disfrutar eventos deportivos en vivo.</p>
         </div>
     </div>
@@ -332,42 +332,165 @@
   
   
 
-<!-- Blog Previews -->
-<section class="blog-preview-section">
-    <h2 class="section-title animate-on-scroll" data-animate="fadeInUp">Últimos Artículos</h2>
-    <div class="blog-grid">
-        <div class="blog-card animate-on-scroll" data-animate="fadeInUp">
-            <img src="images/search.png" alt="Seguridad en Juegos Online">
-            <h3>¿Por Qué Elegir Buenos Proveedores es Clave para Disfrutar Juegos Online con Seguridad?</h3>
-            <p>Un proveedor confiable transforma tu experiencia: sin estrés, sin fraudes, pura diversión.</p>
-            <a href="post1.html" class="read-more">Leer Más</a>
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Section Title & Subtitle -->
+      <h2 class="text-center text-3xl font-bold mb-2">Últimos Artículos</h2>
+      <p class="text-center text-white mb-8">Descubre nuestros últimos artículos y novedades.</p>
+      
+      <!-- Slider Wrapper (relative so arrows can be positioned over it) -->
+      <div class="relative">
+        <!-- Left Arrow (moves out into margin on desktop) -->
+        <button
+          class="absolute md:left-[-2rem] left-0 top-1/2 -translate-y-1/2 bg-gray-200 hover:bg-gray-300 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center z-10"
+          onclick="slideLeft()"
+        >
+          <span class="sr-only">Scroll Left</span>
+          <span class="font-bold text-xl">&larr;</span>
+        </button>
+    
+        <!-- Horizontal Scrolling Container -->
+        <div
+          id="blogSlider"
+          class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth space-x-4 pb-4"
+        >
+          <!-- Card 1 -->
+          <div
+            class="snap-center min-w-[280px] max-w-xs bg-white shadow-md rounded-lg p-4 flex-shrink-0 animate-on-scroll"
+            data-animate="fadeInUp"
+          >
+            <img
+              class="w-full h-40 object-cover mb-3"
+              src="images/search.png"
+              alt="Seguridad en Juegos Online"
+            />
+            <!-- Removed category text -->
+            <h3 class="font-semibold text-gray-800 text-lg mb-2">
+              ¿Por Qué Elegir Buenos Proveedores...?
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              Un proveedor confiable transforma tu experiencia: sin estrés, sin fraudes, pura diversión.
+            </p>
+            <!-- Read More Button -->
+            <a href="post1.html" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded">
+              Leer Más
+            </a>
+          </div>
+    
+          <!-- Card 2 -->
+          <div
+            class="snap-center min-w-[280px] max-w-xs bg-white shadow-md rounded-lg p-4 flex-shrink-0 animate-on-scroll"
+            data-animate="fadeInUp"
+          >
+            <img
+              class="w-full h-40 object-cover mb-3"
+              src="images/chile_casino.jpg"
+              alt="Promociones Reales"
+            />
+            <h3 class="font-semibold text-gray-800 text-lg mb-2">
+              Los Mejores Casinos Online en Chile en 2025
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              Conoce las plataformas top para jugar desde Chile en 2025 con grandes bonos y soporte confiable.
+            </p>
+            <a href="post2.html" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded">
+              Leer Más
+            </a>
+          </div>
+    
+          <!-- Card 3 -->
+          <div
+            class="snap-center min-w-[280px] max-w-xs bg-white shadow-md rounded-lg p-4 flex-shrink-0 animate-on-scroll"
+            data-animate="fadeInUp"
+          >
+            <img
+              class="w-full h-40 object-cover mb-3"
+              src="images/online_casinos_chile.jpg"
+              alt="Juegos Auditados"
+            />
+            <h3 class="font-semibold text-gray-800 text-lg mb-2">
+              ¿Cómo Elegir el Mejor Casino Online en Chile?
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              Aprende qué factores son clave al momento de elegir un casino seguro, justo y completo en Chile.
+            </p>
+            <a href="post3.html" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded">
+              Leer Más
+            </a>
+          </div>
+    
+          <!-- Card 4 -->
+          <div
+            class="snap-center min-w-[280px] max-w-xs bg-white shadow-md rounded-lg p-4 flex-shrink-0 animate-on-scroll"
+            data-animate="fadeInUp"
+          >
+            <img
+              class="w-full h-40 object-cover mb-3"
+              src="images/bonus.jpg"
+              alt="Licencias de Casino"
+            />
+            <h3 class="font-semibold text-gray-800 text-lg mb-2">
+              Bonos de Bienvenida en Casinos Online en Chile
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              Te mostramos cuáles son los bonos más generosos, cómo funcionan y qué casino los ofrece en 2025.
+            </p>
+            <a href="post4.html" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded">
+              Leer Más
+            </a>
+          </div>
+    
+          <!-- Card 5 -->
+          <div
+            class="snap-center min-w-[280px] max-w-xs bg-white shadow-md rounded-lg p-4 flex-shrink-0 animate-on-scroll"
+            data-animate="fadeInUp"
+          >
+            <img
+              class="w-full h-40 object-cover mb-3"
+              src="images/games.jpg"
+              alt="Pinup Casino"
+            />
+            <h3 class="font-semibold text-gray-800 text-lg mb-2">
+              Juegos de Casino Más Populares en Chile
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              Explora los juegos más jugados: tragamonedas, ruleta, blackjack y apuestas deportivas.
+            </p>
+            <a href="post5.html" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-4 rounded">
+              Leer Más
+            </a>
+          </div>
         </div>
-        <div class="blog-card animate-on-scroll" data-animate="fadeInUp">
-            <img src="images/chile_casino.jpg" alt="Promociones Reales">
-            <h3>Los Mejores Casinos Online en Chile en 2025: ¡Diversión y Seguridad Garantizadas!</h3>
-            <p>Conoce las plataformas top para jugar desde Chile en 2025 con grandes bonos y soporte confiable.</p>
-            <a href="post2.html" class="read-more">Leer Más</a>
-        </div>
-        <div class="blog-card animate-on-scroll" data-animate="fadeInUp">
-            <img src="images/online_casinos_chile.jpg" alt="Juegos Auditados">
-            <h3>¿Cómo Elegir el Mejor Casino Online en Chile? (Guía Completa 2025)</h3>
-            <p>Aprende qué factores son clave al momento de elegir un casino seguro, justo y completo en Chile.</p>
-            <a href="post3.html" class="read-more">Leer Más</a>
-        </div>
-        <div class="blog-card animate-on-scroll" data-animate="fadeInUp">
-            <img src="images/bonus.jpg" alt="Licencias de Casino">
-            <h3>Bonos de Bienvenida en Casinos Online en Chile (Comparativa 2025)</h3>
-            <p>Te mostramos cuáles son los bonos más generosos, cómo funcionan y qué casino los ofrece en 2025.</p>
-            <a href="post4.html" class="read-more">Leer Más</a>
-        </div>
-        <div class="blog-card animate-on-scroll" data-animate="fadeInUp">
-            <img src="images/games.jpg" alt="Pinup Casino">
-            <h3>Juegos de Casino Más Populares en Chile: ¿Cuáles Conquistan el 2025?</h3>
-            <p>Explora los juegos más jugados por los chilenos: tragamonedas, ruleta, blackjack y apuestas deportivas.</p>
-            <a href="post5.html" class="read-more">Leer Más</a>
-        </div>
+    
+        <!-- Right Arrow (moves out into margin on desktop) -->
+        <button
+          class="absolute md:right-[-2rem] right-0 top-1/2 -translate-y-1/2 bg-gray-200 hover:bg-gray-300 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center z-10"
+          onclick="slideRight()"
+        >
+          <span class="sr-only">Scroll Right</span>
+          <span class="font-bold text-xl">&rarr;</span>
+        </button>
+      </div>
     </div>
-</section>
+    
+    <script>
+      function slideLeft() {
+        document.getElementById('blogSlider').scrollBy({
+          top: 0,
+          left: -300,
+          behavior: 'smooth'
+        });
+      }
+      function slideRight() {
+        document.getElementById('blogSlider').scrollBy({
+          top: 0,
+          left: 300,
+          behavior: 'smooth'
+        });
+      }
+    </script>
+  </section>
+  
 
 <!-- Footer -->
 <footer class="footer animate-on-scroll" data-animate="fadeInUp">
@@ -401,6 +524,22 @@
         const formattedDate = today.toLocaleDateString("es-ES", { day: 'numeric', month: 'long', year: 'numeric' });
         dateElements.forEach(el => el.textContent = formattedDate);
     });
+
+    function slideLeft() {
+    document.getElementById('blogSlider').scrollBy({
+      top: 0,
+      left: -300,
+      behavior: 'smooth'
+    });
+  }
+  function slideRight() {
+    document.getElementById('blogSlider').scrollBy({
+      top: 0,
+      left: 300,
+      behavior: 'smooth'
+    });
+  }
+
 </script>
 
 </body>
